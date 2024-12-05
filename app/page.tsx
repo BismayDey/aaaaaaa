@@ -47,7 +47,7 @@ export default function Home() {
             <div className={styles.rating}>
               <Star className={styles.starFilled} size={16} />
               <span>4.5/5</span>
-              <span className={styles.reviews}>(115 reviews)</span>
+              <span className={styles.reviews}>(105 reviews)</span>
             </div>
           </div>
           <div className={styles.heroNav}>
@@ -163,9 +163,10 @@ export default function Home() {
       <section className={styles.about}>
         <h2>About</h2>
         <p>
-          The luxurious Seascape Beachside Estate is the lap of nature. Also is
-          the perfect destination for a vacation into pure bliss and
-          tranquility...
+          • Tucked away cosily in the lap of nature, this is the perfect
+          destination getaway for a vacation trip near Delhi and Chandigarh.
+          <br></br> • The tourist-favourite Bhimtal Lake is only a stone’s throw
+          away.
           <button className={styles.readMore}>Read more</button>
         </p>
         <div className={styles.rules}>
