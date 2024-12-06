@@ -12,6 +12,9 @@ import pV from "./images/petV.png";
 import AC from "./images/AC.png";
 import Par from "./images/freeP.png";
 import yo from "./images/SaffronLogo.png";
+import ww from "./images/Vector (3).png";
+import dd from "./images/Group 25.png";
+import mm from "./images/Lineal_Expanded.png";
 import { Star, Search, Phone, Share2, Heart } from "lucide-react";
 import ph from "./images/playhotel.png";
 import styles from "./page.module.css";
@@ -113,29 +116,14 @@ export default function Home() {
           </div>
           <div className={styles.bookingForm}>
             <div className={styles.dateInput}>
-              <Image
-                src="/calendar-icon.svg"
-                alt="Calendar"
-                width={20}
-                height={20}
-              />
+              <Image src={ww} alt="Calendar" width={20} height={20} />
               <span>Check in - Check out</span>
-              <Image
-                src="/chevron-down.svg"
-                alt="Expand"
-                width={20}
-                height={20}
-              />
+              <Image src={dd} alt="Expand" width={20} height={20} />
             </div>
             <div className={styles.guestInput}>
-              <Image src="/user-icon.svg" alt="User" width={20} height={20} />
+              <Image src={mm} alt="Users" width={20} height={20} />
               <span>2 Guests</span>
-              <Image
-                src="/chevron-down.svg"
-                alt="Expand"
-                width={20}
-                height={20}
-              />
+              <Image src={dd} alt="Expand" width={20} height={20} />
             </div>
             <button className={styles.checkAvailability}>
               Check Availability
