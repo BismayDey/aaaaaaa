@@ -76,11 +76,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <div className={styles.rating}>
+      <div className={styles.rating}>
         <Star className={styles.starFilled} size={16} />
         <span>4.5/5</span>
         <span className={styles.reviews}>(105 reviews)</span>
-      </div> */}
+      </div>
       <section className={styles.propertyDetails}>
         <div className={styles.features}>
           <div className={styles.feature}>
