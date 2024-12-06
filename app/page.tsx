@@ -1,32 +1,32 @@
-import Image from "next/image";
-import Xs from "./images/Xs.png";
-import vl from "./images/villa.png";
-import mvl from "./images/minivilla.png";
-import map from "./images/mapv.png";
-import vp from "./images/villaPre.png";
-import B12 from "./images/BED12.png";
-import hou from "./images/houseV.png";
-import GV from "./images/GuesV.png";
-import room from "./images/bedroV.png";
-import pV from "./images/petV.png";
-import AC from "./images/AC.png";
-import Par from "./images/freeP.png";
-import { Star, Search, Phone, Share2, Heart } from "lucide-react";
-import ph from "./images/playhotel.png";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import Xs from './images/Xs.png';
+import vl from './images/villa.png';
+import mvl from './images/minivilla.png';
+import map from './images/mapv.png';
+import vp from './images/villaPre.png';
+import B12 from './images/BED12.png';
+import hou from './images/houseV.png';
+import GV from './images/GuesV.png';
+import room from './images/bedroV.png';
+import pV from './images/petV.png';
+import AC from './images/AC.png';
+import Par from './images/freeP.png';
+import { Star, Search, Phone, Share2, Heart } from 'lucide-react';
+import ph from './images/playhotel.png';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Image src={Xs} alt="XSERIES" />
+          <Image src={Xs} alt='XSERIES' />
         </div>
         <div className={styles.searchBar}>
           <Search className={styles.searchIcon} size={16} />
           <input
-            type="text"
-            placeholder="Search for hotels, villa, location..."
+            type='text'
+            placeholder='Search for hotels, villa, location...'
           />
         </div>
         <div className={styles.navRight}>
@@ -41,20 +41,15 @@ export default function Home() {
       <section className={styles.hero}>
         <Image
           src={vl}
-          alt="Sea La Vie Exterior"
-          layout="fill"
-          objectFit="cover"
+          alt='Sea La Vie Exterior'
+          layout='fill'
+          objectFit='contain'
           priority
         />
         <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <h1>Sea La Vie</h1>
             <p>Alibaug, Maharashtra</p>
-            <div className={styles.rating}>
-              <Star className={styles.starFilled} size={16} />
-              <span>4.5/5</span>
-              <span className={styles.reviews}>(105 reviews)</span>
-            </div>
           </div>
           <div className={styles.heroNav}>
             <span className={styles.navDot} />
@@ -62,14 +57,14 @@ export default function Home() {
             <span className={styles.navDot} />
             <span className={styles.navDot} />
             <button className={styles.playButton}>
-              <Image src={ph} alt="hb" />
+              <Image src={ph} alt='hb' />
             </button>
           </div>
           <div className={styles.xseriesLogo}>
-            <Image src={Xs} alt="XSERIES" />
+            <Image src={Xs} alt='XSERIES' />
           </div>
           <div className={styles.thumbnailPreview}>
-            <Image src={B12} alt="Room Preview" />
+            <Image src={B12} alt='Room Preview' />
           </div>
           <div className={styles.heroActions}>
             <button className={styles.shareBtn}>
@@ -81,23 +76,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <div className={styles.rating}>
+        <Star className={styles.starFilled} size={16} />
+        <span>4.5/5</span>
+        <span className={styles.reviews}>(105 reviews)</span>
+      </div>
       <section className={styles.propertyDetails}>
         <div className={styles.features}>
           <div className={styles.feature}>
-            <Image src={hou} alt="Villa" width={24} height={24} />
+            <Image src={hou} alt='Villa' width={24} height={24} />
             <span>Entire Villa</span>
           </div>
           <div className={styles.feature}>
-            <Image src={GV} alt="Guests" width={24} height={24} />
+            <Image src={GV} alt='Guests' width={24} height={24} />
             <span>8-12 Guests</span>
           </div>
           <div className={styles.feature}>
-            <Image src={room} alt="Bedrooms" width={24} height={24} />
+            <Image src={room} alt='Bedrooms' width={24} height={24} />
             <span>4 Bedrooms</span>
           </div>
           <div className={styles.feature}>
-            <Image src={pV} alt="Pet Friendly" width={24} height={24} />
+            <Image src={pV} alt='Pet Friendly' width={24} height={24} />
             <span>Pet Friendly</span>
           </div>
         </div>
@@ -115,25 +114,25 @@ export default function Home() {
           <div className={styles.bookingForm}>
             <div className={styles.dateInput}>
               <Image
-                src="/calendar-icon.svg"
-                alt="Calendar"
+                src='/calendar-icon.svg'
+                alt='Calendar'
                 width={20}
                 height={20}
               />
               <span>Check in - Check out</span>
               <Image
-                src="/chevron-down.svg"
-                alt="Expand"
+                src='/chevron-down.svg'
+                alt='Expand'
                 width={20}
                 height={20}
               />
             </div>
             <div className={styles.guestInput}>
-              <Image src="/user-icon.svg" alt="User" width={20} height={20} />
+              <Image src='/user-icon.svg' alt='User' width={20} height={20} />
               <span>2 Guests</span>
               <Image
-                src="/chevron-down.svg"
-                alt="Expand"
+                src='/chevron-down.svg'
+                alt='Expand'
                 width={20}
                 height={20}
               />
@@ -166,19 +165,19 @@ export default function Home() {
         <h2>Amenities</h2>
         <div className={styles.amenityGrid}>
           <div className={styles.amenity}>
-            <Image src={room} alt="Bedrooms" width={24} height={24} />
+            <Image src={room} alt='Bedrooms' width={24} height={24} />
             <span>4 Bedrooms</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={Par} alt="Parking" width={24} height={24} />
+            <Image src={Par} alt='Parking' width={24} height={24} />
             <span>Free parking</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={AC} alt="AC" width={24} height={24} />
+            <Image src={AC} alt='AC' width={24} height={24} />
             <span>Air conditioning</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={GV} alt="Guests" width={24} height={24} />
+            <Image src={GV} alt='Guests' width={24} height={24} />
             <span>12 Guests</span>
           </div>
         </div>
@@ -207,21 +206,21 @@ export default function Home() {
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt="Terrace view"
+              alt='Terrace view'
               className={styles.galleryImage}
             />
           </div>
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt="Terrace view"
+              alt='Terrace view'
               className={styles.galleryImage}
             />
           </div>
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt="Terrace view"
+              alt='Terrace view'
               className={styles.galleryImage}
             />
           </div>
@@ -231,7 +230,7 @@ export default function Home() {
       <section className={styles.location}>
         <h2>Location</h2>
         <div className={styles.map}>
-          <Image src={map} alt="Location map" className={styles.mapImage} />
+          <Image src={map} alt='Location map' className={styles.mapImage} />
         </div>
         <button className={styles.getDirection}>Get Direction</button>
       </section>
@@ -251,31 +250,31 @@ export default function Home() {
         <div className={styles.footerGrid}>
           <div className={styles.footerColumn}>
             <h3>Company</h3>
-            <a href="#">Information</a>
-            <a href="#">Signature</a>
-            <a href="#">About</a>
+            <a href='#'>Information</a>
+            <a href='#'>Signature</a>
+            <a href='#'>About</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Company</h3>
-            <a href="#">Information</a>
-            <a href="#">Signature</a>
-            <a href="#">About</a>
+            <a href='#'>Information</a>
+            <a href='#'>Signature</a>
+            <a href='#'>About</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Contact</h3>
-            <a href="mailto:info@xseries.com">info@xseries.com</a>
-            <a href="tel:+919129129127">+91 9129129127</a>
-            <a href="#">Connect to Partner</a>
+            <a href='mailto:info@xseries.com'>info@xseries.com</a>
+            <a href='tel:+919129129127'>+91 9129129127</a>
+            <a href='#'>Connect to Partner</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Partner with us</h3>
-            <a href="#">List a hotel</a>
+            <a href='#'>List a hotel</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Policies</h3>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
-            <a href="#">Cancellation Policy</a>
+            <a href='#'>Privacy Policy</a>
+            <a href='#'>Terms</a>
+            <a href='#'>Cancellation Policy</a>
           </div>
         </div>
         <div className={styles.footerBottom}>
