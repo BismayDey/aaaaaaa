@@ -22,6 +22,8 @@
 .logo {
   display: flex;
   align-items: center;
+  width: 183.51px;
+  height: 42.65px;
 }
 
 .searchBar {
@@ -79,9 +81,8 @@
 }
 
 .getStarted img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+  width: 111px;
+  height: 23.68px;
 }
 
 .phone {
@@ -110,7 +111,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -126,13 +132,13 @@
   font-size: 64px;
   font-weight: 600;
   margin-bottom: 8px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroContent p {
   font-size: 24px;
   opacity: 0.9;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .rating {
@@ -192,23 +198,21 @@
 }
 
 .playButton {
-  background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  color: #ffffff;
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  margin-left: 8px;
+}
+.playButton img {
+  width: 64px;
+  height: 64px;
 }
 
 .xseriesLogo {
   position: absolute;
   bottom: 32px;
   left: 32px;
+  width: 124px;
+  height: 37px;
 }
 
 .thumbnailPreview {
@@ -223,9 +227,8 @@
 }
 
 .thumbnailPreview img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
+  width: 130px;
+  height: 130px;
 }
 
 .thumbnailPreview span {
@@ -323,7 +326,8 @@
   gap: 12px;
 }
 
-.dateInput, .guestInput {
+.dateInput,
+.guestInput {
   display: flex;
   align-items: center;
   background-color: #2c2c2e;
@@ -332,7 +336,8 @@
   cursor: pointer;
 }
 
-.dateInput span, .guestInput span {
+.dateInput span,
+.guestInput span {
   flex-grow: 1;
   margin-left: 12px;
   font-size: 16px;
@@ -436,14 +441,16 @@
   margin: 16px 0;
 }
 
-.veg, .nonVeg {
+.veg,
+.nonVeg {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.veg::before, .nonVeg::before {
-  content: "";
+.veg::before,
+.nonVeg::before {
+  content: '';
   display: block;
   width: 12px;
   height: 12px;
@@ -477,9 +484,8 @@
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: row;
   margin-top: 24px;
 }
 
@@ -488,8 +494,8 @@
 }
 
 .galleryImage {
-  width: 100%;
-  height: 300px;
+  width: 299px;
+  height: 393px;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -510,8 +516,8 @@
 }
 
 .mapImage {
-  width: 100%;
-  height: 400px;
+  width: 797px;
+  height: 232px;
   object-fit: cover;
   border-radius: 16px;
   margin: 24px 0;
@@ -531,22 +537,20 @@
 }
 
 .roomCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: row;
   margin-top: 24px;
 }
 
 .roomCard {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   overflow: hidden;
 }
 
 .roomImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 299px;
+  height: 393px;
+  border-radius: 10px;
 }
 
 .roomDetails {
@@ -664,4 +668,3 @@
     font-size: 18px;
   }
 }
-
