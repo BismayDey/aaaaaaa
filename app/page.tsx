@@ -1,36 +1,37 @@
-import Image from 'next/image';
-import Xs from './images/Xs.png';
-import vl from './images/villa.png';
-import mvl from './images/minivilla.png';
-import map from './images/mapv.png';
-import vp from './images/villaPre.png';
-import B12 from './images/BED12.png';
-import hou from './images/houseV.png';
-import GV from './images/GuesV.png';
-import room from './images/bedroV.png';
-import pV from './images/petV.png';
-import AC from './images/AC.png';
-import Par from './images/freeP.png';
-import { Star, Search, Phone, Share2, Heart } from 'lucide-react';
-import ph from './images/playhotel.png';
-import styles from './page.module.css';
+import Image from "next/image";
+import Xs from "./images/Xs.png";
+import vl from "./images/villa.png";
+import mvl from "./images/minivilla.png";
+import map from "./images/mapv.png";
+import vp from "./images/villaPre.png";
+import B12 from "./images/BED12.png";
+import hou from "./images/houseV.png";
+import GV from "./images/GuesV.png";
+import room from "./images/bedroV.png";
+import pV from "./images/petV.png";
+import AC from "./images/AC.png";
+import Par from "./images/freeP.png";
+import yo from "./images/SaffronLogo.png";
+import { Star, Search, Phone, Share2, Heart } from "lucide-react";
+import ph from "./images/playhotel.png";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Image src={Xs} alt='XSERIES' />
+          <Image src={Xs} alt="XSERIES" />
         </div>
         <div className={styles.searchBar}>
           <Search className={styles.searchIcon} size={16} />
           <input
-            type='text'
-            placeholder='Search for hotels, villa, location...'
+            type="text"
+            placeholder="Search for hotels, villa, location..."
           />
         </div>
         <div className={styles.navRight}>
-          <button className={styles.getStarted}>SAF</button>
+          <Image src={yo} alt="XSERIES" />
           <button className={styles.phone}>
             <Phone size={16} /> +91 9999900000
           </button>
@@ -42,7 +43,7 @@ export default function Home() {
         <Image
           className={styles.villal}
           src={vl}
-          alt='Sea La Vie Exterior'
+          alt="Sea La Vie Exterior"
           priority
         />
         <div className={styles.heroOverlay}>
@@ -56,22 +57,14 @@ export default function Home() {
             <span className={styles.navDot} />
             <span className={styles.navDot} />
             <button className={styles.playButton}>
-              <Image src={ph} alt='hb' />
+              <Image src={ph} alt="hb" />
             </button>
           </div>
           <div className={styles.xseriesLogo}>
-            <Image src={Xs} alt='XSERIES' />
+            <Image src={Xs} alt="XSERIES" />
           </div>
           <div className={styles.thumbnailPreview}>
-            <Image src={B12} alt='Room Preview' />
-          </div>
-          <div className={styles.heroActions}>
-            <button className={styles.shareBtn}>
-              <Share2 size={20} />
-            </button>
-            <button className={styles.wishlistBtn}>
-              <Heart size={20} />
-            </button>
+            <Image src={B12} alt="Room Preview" />
           </div>
         </div>
       </section>
@@ -80,22 +73,30 @@ export default function Home() {
         <span>4.5/5</span>
         <span className={styles.reviews}>(105 reviews)</span>
       </div>
+      <div className={styles.heroActions}>
+        <button className={styles.shareBtn}>
+          <Share2 size={20} />
+        </button>
+        <button className={styles.wishlistBtn}>
+          <Heart size={20} />
+        </button>
+      </div>
       <section className={styles.propertyDetails}>
         <div className={styles.features}>
           <div className={styles.feature}>
-            <Image src={hou} alt='Villa' width={24} height={24} />
+            <Image src={hou} alt="Villa" width={24} height={24} />
             <span>Entire Villa</span>
           </div>
           <div className={styles.feature}>
-            <Image src={GV} alt='Guests' width={24} height={24} />
+            <Image src={GV} alt="Guests" width={24} height={24} />
             <span>8-12 Guests</span>
           </div>
           <div className={styles.feature}>
-            <Image src={room} alt='Bedrooms' width={24} height={24} />
+            <Image src={room} alt="Bedrooms" width={24} height={24} />
             <span>4 Bedrooms</span>
           </div>
           <div className={styles.feature}>
-            <Image src={pV} alt='Pet Friendly' width={24} height={24} />
+            <Image src={pV} alt="Pet Friendly" width={24} height={24} />
             <span>Pet Friendly</span>
           </div>
         </div>
@@ -113,25 +114,25 @@ export default function Home() {
           <div className={styles.bookingForm}>
             <div className={styles.dateInput}>
               <Image
-                src='/calendar-icon.svg'
-                alt='Calendar'
+                src="/calendar-icon.svg"
+                alt="Calendar"
                 width={20}
                 height={20}
               />
               <span>Check in - Check out</span>
               <Image
-                src='/chevron-down.svg'
-                alt='Expand'
+                src="/chevron-down.svg"
+                alt="Expand"
                 width={20}
                 height={20}
               />
             </div>
             <div className={styles.guestInput}>
-              <Image src='/user-icon.svg' alt='User' width={20} height={20} />
+              <Image src="/user-icon.svg" alt="User" width={20} height={20} />
               <span>2 Guests</span>
               <Image
-                src='/chevron-down.svg'
-                alt='Expand'
+                src="/chevron-down.svg"
+                alt="Expand"
                 width={20}
                 height={20}
               />
@@ -159,24 +160,45 @@ export default function Home() {
           <button>Things to do</button>
         </div>
       </section>
-
+      <div className={styles.bookingcardMob}>
+        <div className={styles.bcm_text}>
+          <div className={styles.text_price}>
+            <h6>₹1,49,086</h6>
+            <div className={styles.inside_price}>
+              <strong>₹1,00,086</strong>
+              <p>/night</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.bcm_btn}>
+          <button className={styles.inside_bcm_btn}>Check Availability</button>
+        </div>
+      </div>
       <section className={styles.amenities}>
         <h2>Amenities</h2>
         <div className={styles.amenityGrid}>
           <div className={styles.amenity}>
-            <Image src={room} alt='Bedrooms' width={24} height={24} />
+            <Image src={room} alt="Bedrooms" width={24} height={24} />
             <span>4 Bedrooms</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={Par} alt='Parking' width={24} height={24} />
+            <Image src={Par} alt="Parking" width={24} height={24} />
             <span>Free parking</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={AC} alt='AC' width={24} height={24} />
+            <Image src={AC} alt="AC" width={24} height={24} />
             <span>Air conditioning</span>
           </div>
           <div className={styles.amenity}>
-            <Image src={GV} alt='Guests' width={24} height={24} />
+            <Image src={GV} alt="Guests" width={24} height={24} />
+            <span>12 Guests</span>
+          </div>
+          <div className={styles.amenity}>
+            <Image src={room} alt="Bedrooms" width={24} height={24} />
+            <span>4 Bedrooms</span>
+          </div>
+          <div className={styles.amenity}>
+            <Image src={GV} alt="Guests" width={24} height={24} />
             <span>12 Guests</span>
           </div>
         </div>
@@ -190,8 +212,12 @@ export default function Home() {
           spread of meals cooked basis of Sea at an additional charge
         </p>
         <div className={styles.mealTypes}>
-          <span className={styles.veg}>Veg</span>
-          <span className={styles.nonVeg}>Non Veg</span>
+          <span className={styles.veg}>
+            <span className="dead">Veg</span>
+          </span>
+          <span className={styles.nonVeg}>
+            <span className="dead1">Non Veg</span>
+          </span>
         </div>
         <div className={styles.mealActions}>
           <button>View Menu</button>
@@ -205,21 +231,21 @@ export default function Home() {
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt='Terrace view'
+              alt="Terrace view"
               className={styles.galleryImage}
             />
           </div>
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt='Terrace view'
+              alt="Terrace view"
               className={styles.galleryImage}
             />
           </div>
           <div className={styles.galleryItem}>
             <Image
               src={mvl}
-              alt='Terrace view'
+              alt="Terrace view"
               className={styles.galleryImage}
             />
           </div>
@@ -229,7 +255,7 @@ export default function Home() {
       <section className={styles.location}>
         <h2>Location</h2>
         <div className={styles.map}>
-          <Image src={map} alt='Location map' className={styles.mapImage} />
+          <Image src={map} alt="Location map" className={styles.mapImage} />
         </div>
         <button className={styles.getDirection}>Get Direction</button>
       </section>
@@ -249,35 +275,41 @@ export default function Home() {
         <div className={styles.footerGrid}>
           <div className={styles.footerColumn}>
             <h3>Company</h3>
-            <a href='#'>Information</a>
-            <a href='#'>Signature</a>
-            <a href='#'>About</a>
+            <a href="#">Company</a>
+            <a href="#">SaffronStays</a>
+            <a href="#">Signature</a>
+            <a href="#">XSeries</a>
+            <a href="#">About</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Company</h3>
-            <a href='#'>Information</a>
-            <a href='#'>Signature</a>
-            <a href='#'>About</a>
+            <a href="#">Company</a>
+            <a href="#">SaffronStays</a>
+            <a href="#">Signature</a>
+            <a href="#">XSeries</a>
+            <a href="#">About</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Contact</h3>
-            <a href='mailto:info@xseries.com'>info@xseries.com</a>
-            <a href='tel:+919129129127'>+91 9129129127</a>
-            <a href='#'>Connect to Partner</a>
+            <a href="mailto:mail@saffronstays.com">mail@saffronstays.com</a>
+            <a href="tel:+91 3728253727">+91 3728253727</a>
+            <a href="#">Contact us</a>
+            <a href="#">Connect to Partner</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Partner with us</h3>
-            <a href='#'>List a hotel</a>
+            <a href="#">List a home</a>
           </div>
           <div className={styles.footerColumn}>
             <h3>Policies</h3>
-            <a href='#'>Privacy Policy</a>
-            <a href='#'>Terms</a>
-            <a href='#'>Cancellation Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Cancellation Policy</a>
           </div>
         </div>
         <div className={styles.footerBottom}>
-          <p>© 2023 XSeries Corp. All rights reserved.</p>
+          <p>© 2021 SaffronStays. All rights reserved</p>
           <div className={styles.socialDots}>
             <span className={styles.dot} />
             <span className={styles.dot} />
