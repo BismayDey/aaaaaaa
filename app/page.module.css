@@ -25,7 +25,6 @@
   width: 183.51px;
   height: 42.65px;
 }
-
 .searchBar {
   display: flex;
   align-items: center;
@@ -35,7 +34,6 @@
   width: 300px;
   margin: 0 16px;
 }
-
 .searchIcon {
   color: #ffffff;
   opacity: 0.7;
@@ -65,7 +63,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  border-radius: 9999px;
+  border-radius: 100%;
   border: none;
   cursor: pointer;
   font-size: 14px;
