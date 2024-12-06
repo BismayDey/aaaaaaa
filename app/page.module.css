@@ -2,7 +2,7 @@
   min-height: 100vh;
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .nav {
@@ -98,7 +98,7 @@
 
 .hero {
   height: 100vh;
-  background-image: url('/placeholder.svg');
+  background-image: url("/placeholder.svg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -450,7 +450,7 @@
 
 .veg::before,
 .nonVeg::before {
-  content: '';
+  content: "";
   display: block;
   width: 12px;
   height: 12px;
@@ -487,10 +487,13 @@
   display: flex;
   flex-direction: row;
   margin-top: 24px;
+  overflow-x: auto;
+  gap: 16px;
 }
 
 .galleryItem {
   position: relative;
+  flex: 0 0 auto;
 }
 
 .galleryImage {
@@ -516,8 +519,9 @@
 }
 
 .mapImage {
-  width: 797px;
-  height: 232px;
+  width: 100%;
+  max-width: 797px;
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
   margin: 24px 0;
@@ -540,11 +544,14 @@
   display: flex;
   flex-direction: row;
   margin-top: 24px;
+  overflow-x: auto;
+  gap: 16px;
 }
 
 .roomCard {
   border-radius: 16px;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .roomImage {
@@ -616,6 +623,20 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+@media (max-width: 1024px) {
+  .propertyDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingCard {
+    max-width: 100%;
+  }
+
+  .features {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     padding: 16px;
@@ -644,6 +665,14 @@
   .heroContent p {
     font-size: 20px;
   }
+
+  .rules {
+    flex-wrap: wrap;
+  }
+
+  .mealActions {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -666,5 +695,14 @@
 
   .heroContent p {
     font-size: 18px;
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .amenityGrid {
+    grid-template-columns: 1fr;
   }
 }
