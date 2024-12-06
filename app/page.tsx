@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SL from "./images/SaffronLogo.png";
 import Xs from "./images/Xs.png";
 import vl from "./images/villa.png";
 import mvl from "./images/minivilla.png";
@@ -31,9 +30,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.navRight}>
-          <button className={styles.getStarted}>
-            <Image src={SL} alt="SAF" />
-          </button>
+          <button className={styles.getStarted}>SAF</button>
           <button className={styles.phone}>
             <Phone size={16} /> +91 9999900000
           </button>
@@ -153,8 +150,8 @@ export default function Home() {
         <p>
           • Tucked away cosily in the lap of nature, this is the perfect
           destination getaway for a vacation trip near Delhi and Chandigarh.
-          <br /> • The tourist-favourite Bhimtal Lake is only a stone's throw
-          away.
+          <br /> • The tourist-favourite Bhimtal Lake is only a stone&apos;s
+          throw away.
           <button className={styles.readMore}>Read more</button>
         </p>
         <div className={styles.rules}>
