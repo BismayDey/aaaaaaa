@@ -781,6 +781,9 @@
   .nav {
     padding: 16px;
   }
+  .about {
+    margin-top: -60px;
+  }
   .navRight {
     gap: 8px;
   }
