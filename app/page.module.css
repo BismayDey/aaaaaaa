@@ -3,6 +3,7 @@
   background-color: #000000;
   color: #ffffff;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -34,6 +35,7 @@
   border-radius: 9999px;
   width: 300px;
   margin: 0 16px;
+  transition: all 0.3s ease;
 }
 
 .searchIcon {
@@ -70,14 +72,21 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .getStarted {
   background-color: transparent;
-  padding: 8px;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
 }
 
 .getStarted img {
@@ -114,8 +123,8 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.6) 100%
   );
   display: flex;
   flex-direction: column;
@@ -126,17 +135,29 @@
 .heroContent {
   max-width: 800px;
   margin-bottom: 24px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .heroContent h1 {
-  font-size: 64px;
+  font-size: clamp(36px, 8vw, 64px);
   font-weight: 600;
   margin-bottom: 8px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .heroContent p {
-  font-size: 24px;
+  font-size: clamp(18px, 4vw, 24px);
   opacity: 0.9;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -176,6 +197,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heroActions button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .heroNav {
@@ -191,6 +217,7 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .navDot:first-child {
@@ -201,7 +228,13 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.playButton:hover {
+  transform: scale(1.1);
+}
+
 .playButton img {
   width: 64px;
   height: 64px;
@@ -224,6 +257,11 @@
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.thumbnailPreview:hover {
+  transform: translateY(-5px);
 }
 
 .thumbnailPreview img {
@@ -250,6 +288,7 @@
 
 .features {
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 24px;
@@ -260,6 +299,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 200px;
 }
 
 .bookingCard {
@@ -268,6 +308,8 @@
   border-radius: 16px;
   width: 100%;
   max-width: 380px;
+  position: sticky;
+  top: 100px;
 }
 
 .priceContainer {
@@ -623,6 +665,23 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+@media (max-width: 1200px) {
+  .propertyDetails {
+    grid-template-columns: 1fr;
+    margin-top: -32px;
+  }
+
+  .bookingCard {
+    position: relative;
+    top: 0;
+    max-width: 100%;
+  }
+
+  .features {
+    justify-content: space-between;
+  }
+}
+
 @media (max-width: 1024px) {
   .propertyDetails {
     grid-template-columns: 1fr;
@@ -639,7 +698,7 @@
 
 @media (max-width: 768px) {
   .nav {
-    padding: 16px;
+    padding: 12px 16px;
   }
 
   .searchBar {
@@ -658,51 +717,147 @@
     display: none;
   }
 
-  .heroContent h1 {
-    font-size: 48px;
+  .heroOverlay {
+    padding: 24px 16px;
   }
 
-  .heroContent p {
-    font-size: 20px;
+  .heroContent {
+    margin-bottom: 16px;
+  }
+
+  .heroActions {
+    top: 24px;
+    right: 16px;
+  }
+
+  .xseriesLogo {
+    bottom: 24px;
+    left: 16px;
+    width: 100px;
+    height: 30px;
+  }
+
+  .thumbnailPreview {
+    bottom: 24px;
+    right: 16px;
+  }
+
+  .thumbnailPreview img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .features {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .feature {
+    min-width: calc(50% - 8px);
+    justify-content: center;
   }
 
   .rules {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
-  .mealActions {
-    flex-direction: column;
+  .rules button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .gallery,
+  .roomCards {
+    margin: 16px -16px;
+    padding: 0 16px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .galleryItem,
+  .roomCard {
+    scroll-snap-align: start;
+  }
+
+  .galleryImage,
+  .roomImage {
+    width: 280px;
+    height: 370px;
   }
 }
 
 @media (max-width: 480px) {
   .nav {
-    padding: 12px;
+    padding: 8px 12px;
   }
 
   .logo img {
-    width: 90px;
-    height: 18px;
+    width: 80px;
+    height: 16px;
   }
 
   .navRight button {
     font-size: 12px;
   }
 
-  .heroContent h1 {
-    font-size: 36px;
-  }
-
-  .heroContent p {
-    font-size: 18px;
-  }
-
   .feature {
-    flex-direction: column;
-    text-align: center;
+    min-width: 100%;
+  }
+
+  .rules {
+    grid-template-columns: 1fr;
   }
 
   .amenityGrid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .galleryImage,
+  .roomImage {
+    width: 260px;
+    height: 340px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .socialDots {
+    justify-content: center;
+  }
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add better touch handling for mobile devices */
+@media (hover: none) {
+  .gallery,
+  .roomCards {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Improve loading performance */
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

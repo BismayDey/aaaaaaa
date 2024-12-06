@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Xs from "./images/Xs.png";
 import vl from "./images/villa.png";
@@ -11,9 +14,10 @@ import room from "./images/bedroV.png";
 import pV from "./images/petV.png";
 import AC from "./images/AC.png";
 import Par from "./images/freeP.png";
-import { Star, Search, Phone, Share2, Heart } from "lucide-react";
+import { Star, Search, Phone, Share2, Heart, MenuIcon } from "lucide-react";
 import ph from "./images/playhotel.png";
 import styles from "./page.module.css";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Home() {
   return (
@@ -30,11 +34,27 @@ export default function Home() {
           />
         </div>
         <div className={styles.navRight}>
-          <button className={styles.getStarted}>SAF</button>
-          <button className={styles.phone}>
-            <Phone size={16} /> +91 9999900000
-          </button>
-          <button className={styles.login}>Login</button>
+          <Sheet>
+            <SheetTrigger className="lg:hidden">
+              <MenuIcon className="h-6 w-6 text-white" />
+            </SheetTrigger>
+            <SheetContent side="left" className="w-[300px] bg-black text-white">
+              <div className="flex flex-col gap-4 pt-8">
+                <button className={styles.getStarted}>SAF</button>
+                <button className={styles.phone}>
+                  <Phone size={16} /> +91 9999900000
+                </button>
+                <button className={styles.login}>Login</button>
+              </div>
+            </SheetContent>
+          </Sheet>
+          <div className="hidden lg:flex items-center gap-4">
+            <button className={styles.getStarted}>SAF</button>
+            <button className={styles.phone}>
+              <Phone size={16} /> +91 9999900000
+            </button>
+            <button className={styles.login}>Login</button>
+          </div>
         </div>
       </nav>
 
