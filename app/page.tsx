@@ -40,10 +40,9 @@ export default function Home() {
 
       <section className={styles.hero}>
         <Image
+          className={styles.villal}
           src={vl}
           alt='Sea La Vie Exterior'
-          layout='fill'
-          objectFit='contain'
           priority
         />
         <div className={styles.heroOverlay}>
